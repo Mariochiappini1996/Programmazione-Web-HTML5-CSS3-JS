@@ -1,0 +1,5 @@
+[
+{ "id": 101, "titolo": "Viaggio in Italia", "autore": "Anna", "estratto": "Un tour indimenticabile tra le città d'arte...", "contenuto": "Il contenuto completo del viaggio in Italia..." },
+{ "id": 102, "titolo": "La Cucina Molecolare", "autore": "Marco", "estratto": "Scopriamo i segreti di questa tecnica culinaria...", "contenuto": "Il contenuto completo della cucina molecolare..." },
+{ "id": 103, "titolo": "Programmare in Rust", "autore": "Clara", "estratto": "Una guida introduttiva a Rust per principianti...", "contenuto": "Il contenuto completo della guida a Rust..." }
+]
