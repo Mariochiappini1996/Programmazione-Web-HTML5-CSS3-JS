@@ -1,0 +1,165 @@
+body {
+    background-color: #f0f0f0;
+    color: #333;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%; /*full page*/
+    max-width: 1200px; /* Limita la larghezza massima */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /*text-align: center;*/
+}
+
+#header, #footer {
+    background-color: #333; /* background in comune */
+    color: #ffffff; /* colore del testo in comune */
+    padding: 10px 20px;
+    text-align: center;
+}
+
+#header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#header h1 {
+    margin: 0.5em 0;
+}
+
+#footer {
+    height: 80px; /* altezza data dal problema */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: auto; /* Spinge il footer in fondo alla pagina */
+}
+
+#nav-menu ul {
+    list-style: none;/* Rimuove i punti elenco */
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+#nav-menu li {
+    margin: 0 10px; /* Spazio tra i link del menu */
+}
+
+#nav-menu a {
+    color: #ffffff; /* Colore del testo dei link */
+    text-decoration: none; /* Rimuove la sottolineatura */
+}
+
+.hamburger {
+    display: none; /* Nasconde l'icona hamburger per schermi grandi */
+    cursor: pointer; /* Cambia il cursore quando si passa sopra l'icona */
+}
+
+.hamburger div {
+    width: 35px;
+    height: 5px;
+    background-color: black; /* Colore delle linee dell'icona hamburger */
+    margin: 6px 0; /* Spazio tra le linee */
+    transition: 0.3s;
+}
+
+main {
+    display: flex;
+    flex-direction: column; /* Colonne per il layout */
+    align-items: center; /* Centra il contenuto orizzontalmente */
+    justify-content: center; /* contatore e bottoni centrati verticalmente */
+    flex-grow: 1; /* Permette al main di espandersi per riempire lo spazio disponibile */
+    padding: 20px; /* Padding per il main */
+    text-align: center; /* Centra il testo all'interno del main */
+}
+
+.counter-section #counter-value {
+    font-size: 3em; /* Dimensione del contatore */
+    margin: 0.3em 0; /* Margine sopra e sotto il contatore */
+}
+
+.buttons-section {
+    display: flex; /* Usa flexbox per i bottoni */
+    flex-direction: column; /* Colonne per i bottoni */
+    align-items: center; /* Centra i bottoni orizzontalmente */
+    margin-top: 20px; /* Spazio sopra i bottoni */
+    width: auto; /* Larghezza piena per i bottoni */
+    max-width: 400px; /* Larghezza massima per la sezione dei bottoni */
+    
+}
+
+.button-row {
+    display: flex; /* Usa flexbox per i bottoni */
+    justify-content: center; /* Centra i bottoni orizzontalmente */
+    margin-bottom: 10px; /* Spazio tra le righe di bottoni */
+    width: auto; /* Larghezza piena per i bottoni */
+    flex-direction: row; /* Righe per i bottoni */
+
+}
+
+.buttons-section button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 1px; /* Spazio tra i bottoni */
+    font-size: 1em; /* Dimensione del testo dei bottoni */
+    border-radius: 5px; /* Angoli arrotondati per i bottoni */
+}
+
+.buttons-section button:hover {
+    opacity: 0.9; /* Effetto hover sui bottoni */
+}
+
+.color-button button{
+    width: 241px;
+}
+
+@media (max-width: 599px) {
+    #nav-menu ul {
+        flex-direction: column; /* Colonne per il menu */
+        align-items: center; /* Centra gli elementi del menu */
+        display: none; /* Nasconde il menu di navigazione per schermi piccoli */
+        position: absolute; /* Posizione assoluta per il menu */
+        top: 70px; /* Posizione sotto l'header */
+        left: 0; /* Allinea a sinistra */
+        right: 0; /* Allinea a destra */
+        background-color: #333; /* Colore di sfondo del menu */
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .hamburger {
+        display: block; /* Mostra l'icona hamburger su schermi piccoli */
+    }
+
+    #nav-menu ul {
+        display: none; /* Nasconde il menu di navigazione per schermi piccoli */
+    }
+
+    #nav-menu ul.active {
+        display: flex; /* Mostra il menu di navigazione quando attivo */
+    }
+
+    .buttons-section {
+        align-items: stretch; /* Allinea i bottoni per occupare tutta la larghezza */
+    }
+    .button-row {
+        flex-direction: column; /* Colonne per i bottoni */
+        width: 100%; /* Larghezza piena per i bottoni */
+        margin-bottom: 0; /* Rimuove lo spazio tra le righe di bottoni */
+    }
+    .buttons-row button {
+        margin: 5px 0; /* Spazio tra i bottoni */
+    }
+}
