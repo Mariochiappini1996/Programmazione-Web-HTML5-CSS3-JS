@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titolo Esame</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="modal-overlay" class="hidden"></div>
+    <div id="modal-container" class="hidden">
+        <button id="close-modal-btn">&times;</button>
+        <div id="modal-content">
+            <h2>Dettagli</h2>
+            <p>Contenuto di esempio della modale.</p>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <header>
+            <h1>Titolo della Pagina</h1>
+            <nav class="main-nav">
+                <div id="hamburger-icon" class="hamburger-icon">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <ul id="nav-links" class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contatti</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <h2>Contenuto Principale</h2>
+            <div id="content-grid" class="content-grid">
+                <div class="card">
+                    <p>Card di esempio 1</p>
+                </div>
+                <div class="card">
+                    <p>Card di esempio 2</p>
+                </div>
+            </div>
+
+            <div class="actions">
+                <button id="main-action-btn">Azione Principale</button>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Nome Esame</p>
+        </footer>
+
+    </div> 
+    <script src="script.js" defer></script>
+</body>
+</html>
