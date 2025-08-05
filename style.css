@@ -1,0 +1,65 @@
+/* Stili di base e comuni */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif; /* Font per l'header e il resto della pagina */
+    background-color: #f0f0f0; /* Sfondo del main */ 
+}
+
+header {
+    background-color: #333; /* Sfondo grigio scuro */ 
+    color: #fff; /* Testo bianco */ 
+    text-align: center; /* Testo centrato */ 
+    padding: 20px; /* Padding su tutti i lati */ 
+}
+
+footer {
+    background-color: #333; /* Sfondo grigio scuro */ 
+    color: #fff; /* Testo bianco */ 
+    text-align: center; /* Testo centrato */ 
+    padding: 20px; /* Padding su tutti i lati */ 
+}
+
+/* Stile delle card attività */
+.task-card {
+    background-color: #fff; /* Sfondo bianco */ 
+    padding: 10px; /* Padding */ 
+    border-radius: 5px; /* Bordo arrotondato */ 
+    margin: 10px; /* Margine */ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-card button {
+    background-color: #007bff; /* Sfondo blu */ 
+    color: #fff; /* Testo bianco */ 
+    padding: 10px; /* Padding */ 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Stili per attività completate */
+.task-card.completed p {
+    text-decoration: line-through; /* Testo barrato */ 
+    color: #888; /* Colore testo grigio chiaro */ 
+}
+
+.task-card.completed button {
+    background-color: grey; /* Pulsante grigio */ 
+    cursor: not-allowed;
+}
+
+/* 3) Layout responsivo mobile-first */
+/* Default: singola colonna per schermi piccoli (fino a 600px) */
+#task-container {
+    display: block;
+}
+
+/* Layout a due colonne per schermi grandi (oltre 600px) */
+@media (min-width: 601px) {
+    #task-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Due colonne di uguale larghezza */
+    }
+}
