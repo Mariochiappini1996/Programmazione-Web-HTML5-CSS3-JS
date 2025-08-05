@@ -1,0 +1,182 @@
+/* --- Question 2: Basic Styling --- */
+body {
+    background-color: #e0f7fa; /* [cite: 4] */
+    font-family: Arial, sans-serif; /* [cite: 5] */
+    margin: 0;
+    padding: 20px; /* Added some padding for better visual */
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    background-color: #ffffff; /* [cite: 4] */
+    width: 100%;
+    max-width: 960px; /* [cite: 3] */
+    margin: 0 auto; /* Centered horizontally [cite: 3] */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Optional: for better visual separation */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 2px solid #00796b; /* [cite: 4, 5] */
+}
+
+.logo {
+    /* Title aligned to the left by default due to flex order */
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav.menu {
+    /* Menu aligned to the right by default due to flex order and justify-content: space-between on header */
+    display: flex; /* [cite: 9] */
+}
+
+nav.menu a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #004d40; /* [cite: 4] */
+    font-weight: bold;
+}
+
+.hamburger-menu {
+    display: none; /* Hidden by default on desktop */
+    cursor: pointer;
+}
+
+.hamburger-menu div { /* [cite: 9] */
+    width: 35px; /* [cite: 9] */
+    height: 5px; /* [cite: 9] */
+    background-color: black; /* [cite: 9] */
+    margin: 6px 0; /* [cite: 9] */
+}
+
+main {
+    display: flex;
+    border-bottom: 2px solid #00796b; /* Assuming main content also has this border, or just columns */
+}
+
+.col-left {
+    width: 30%; /* [cite: 5] */
+    padding: 15px;
+    border-right: 2px solid #00796b; /* [cite: 5] */
+}
+
+.col-left ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.col-left ul li {
+    padding: 8px 0;
+    cursor: pointer;
+    border-bottom: 1px solid #ccc;
+}
+
+.col-left ul li:last-child {
+    border-bottom: none;
+}
+
+.col-left ul li:hover {
+    background-color: #f0f0f0;
+}
+
+.col-right {
+    width: 70%; /* Adjusted to 70% to make up 100% with the 30% left column, as 80% would exceed [cite: 5] */
+    padding: 15px;
+}
+
+.col-right h2 { /* [cite: 7] */
+    margin-top: 0;
+}
+
+.col-right p { /* [cite: 7] */
+    margin-bottom: 20px;
+}
+
+#aggiornaColoriButton { /* [cite: 7] */
+    padding: 10px 15px;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#aggiornaColoriButton:hover {
+    background-color: #004d40;
+}
+
+footer {
+    height: 0px; /* [cite: 8] */
+    border-top: 0px solid #00796b; /* [cite: 8] */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* --- Question 3: Responsive CSS (Desktop-first) --- */
+@media (max-width: 999px) { /* Viewport minori di 1000px [cite: 9] */
+    .container {
+        width: 700px; /* [cite: 9] */
+        max-width: 100%; /* Ensure it doesn't overflow very small screens if 700px is too wide */
+    }
+
+    nav.menu {
+        display: none; /* Hide the normal menu [cite: 9] */
+        flex-direction: column;
+        position: absolute;
+        top: 70px; /* Adjust based on header height */
+        right: 20px;
+        background-color: #ffffff;
+        border: 1px solid #00796b;
+        padding: 10px;
+        z-index: 100;
+    }
+
+    nav.menu.active { /* Class to toggle visibility with JS */
+        display: flex;
+    }
+
+    nav.menu a {
+        margin: 5px 0;
+    }
+
+    .hamburger-menu {
+        display: block; /* Show hamburger menu [cite: 9] */
+    }
+
+    main {
+        flex-direction: column; /* Stack columns */
+    }
+
+    .col-left, .col-right {
+        width: 100%; /* Full width for stacked columns */
+        border-right: none; /* Remove right border when stacked */
+        border-bottom: 2px solid #00796b; /* Add bottom border to left column when stacked */
+    }
+
+    .col-left {
+      border-bottom: 2px solid #00796b; /* [cite: 5] */
+    }
+
+    .col-right {
+        border-bottom: none; /* Remove bottom border from right column if it's the last element in main */
+    }
+}
+
+@media (max-width: 720px) { /* Further adjustments if container becomes too narrow */
+    .container {
+        width: 95%;
+    }
+     body {
+        padding: 10px;
+    }
+    header, .col-left, .col-right, footer {
+        padding: 10px;
+    }
+}
