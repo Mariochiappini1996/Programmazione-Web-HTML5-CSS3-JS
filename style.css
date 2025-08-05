@@ -1,0 +1,83 @@
+/* Stili di base e Desktop-First (> 900px) */
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.container {
+    margin: 20px auto; /* Centratura orizzontale */
+    border: 3px solid green; /* Bordo verde [cite: 74] */
+    width: 880px; /* Larghezza per schermi > 900px [cite: 73] */
+}
+
+header, footer {
+    text-align: center; /* Testo centrato [cite: 74] */
+    padding: 10px;
+}
+
+footer p {
+    color: darkgreen; /* Colore testo footer [cite: 74] */
+}
+
+/* Stile galleria */
+#gallery {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#gallery li {
+    width: 200px; /* [cite: 75] */
+    height: 200px; /* [cite: 75] */
+    margin: 5px; /* [cite: 75] */
+    background-color: lightcoral; /* [cite: 75] */
+    display: flex; /* Per centrare il link */
+    justify-content: center; /* Per centrare il link */
+    align-items: center; /* Per centrare il link */
+}
+
+#gallery li a {
+    color: white; /* [cite: 75] */
+    font-size: 28px; /* [cite: 75] */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#load-more-btn {
+    display: block;
+    margin: 10px auto 20px auto;
+}
+
+/* Banner per la descrizione */
+#description-banner {
+    position: fixed; /* [cite: 78] */
+    top: 10px; /* [cite: 78] */
+    left: 50%;
+    transform: translateX(-50%); /* Per centrare orizzontalmente */
+    width: 500px; /* [cite: 78] */
+    height: 100px; /* [cite: 78] */
+    background-color: rgba(128, 128, 128, 0.9); /* Sfondo grigio con opacità 90% [cite: 80] */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+#description-text {
+    color: white; /* [cite: 79] */
+    font-size: 30px; /* [cite: 79] */
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Media Query per schermi < 500px */
+@media (max-width: 500px) {
+    .container {
+        width: 480px; /* [cite: 73] */
+    }
+}
