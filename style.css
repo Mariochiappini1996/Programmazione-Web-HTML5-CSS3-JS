@@ -1,0 +1,195 @@
+/* Stili di base e layout */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Colore di base tema chiaro [cite: 30] */
+    color: #333; /* Colore testo di base tema chiaro [cite: 30] */
+    margin: 20px; /* [cite: 15] */
+}
+
+.container {
+    margin: 0 auto; /* Centratura orizzontale [cite: 15] */
+    min-width: 400px; /* [cite: 15] */
+    max-width: 800px; /* [cite: 15] */
+}
+
+/* Header e Footer */
+header, footer {
+    height: 80px; /* [cite: 16] */
+    background-color: #fff;
+    border: 1px solid #cccccc; /* [cite: 17] */
+    display: flex;
+    justify-content: center; /* Centratura orizzontale testo [cite: 16] */
+    align-items: center; /* Centratura verticale testo [cite: 16] */
+    color: #333;
+}
+
+header h1, footer p {
+    font-family: Arial, sans-serif; /* [cite: 16] */
+    font-weight: bold; /* [cite: 16] */
+    font-size: 24px; /* [cite: 16] */
+    margin: 0;
+}
+
+/* Menu cambio tema */
+.theme-switcher {
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 10px; /* Spazio sotto il menu del tema [cite: 18] */
+}
+
+.theme-switcher a {
+    text-decoration: none;
+    color: #333;
+    padding: 0 5px;
+}
+
+/* Filtri lista */
+.filters {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.filters button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid #cccccc;
+    background-color: #e9e9e9; /* Colore di sfondo per i pulsanti [cite: 19] */
+}
+
+/* Stili di base e del tema chiaro */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* [cite: 416] */
+    color: #333; /* [cite: 416] */
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    min-width: 400px; /* [cite: 401] */
+    max-width: 800px; /* [cite: 401] */
+    margin: 20px auto; /* [cite: 401] */
+    border: 1px solid #cccccc; /* [cite: 403] */
+}
+
+header, footer {
+    height: 80px; /* [cite: 402] */
+    display: flex;
+    justify-content: center; /* [cite: 402] */
+    align-items: center; /* [cite: 402] */
+    font-weight: bold; /* [cite: 402] */
+    font-size: 24px; /* [cite: 402] */
+    background-color: #333; /* Colore header/footer per tema scuro [cite: 416] */
+    color: #f0f0f0;
+}
+
+.theme-switcher, .filters {
+    text-align: center;
+    padding: 15px;
+}
+
+/* Stile per le card delle attività */
+.activity-item {
+    background-color: #fff; /* [cite: 406] */
+    border: 1px solid #cccccc; /* [cite: 403] */
+    border-radius: 5px; /* [cite: 406] */
+    padding: 15px; /* [cite: 406] */
+    margin: 0 15px 15px 15px; /* [cite: 406] */
+    display: flex;
+    align-items: center;
+}
+
+.activity-item p {
+    margin: 0;
+    font-size: 16px; /* [cite: 407] */
+}
+
+.activity-item p.completed {
+    text-decoration: line-through; /* [cite: 407] */
+}
+
+.activity-item button:disabled {
+    background-color: grey; /* [cite: 408] */
+}
+
+/* 4) Layout mobile-first */
+/* Schermi fino a 600px: layout verticale */
+.activity-item {
+    flex-direction: column; /* [cite: 411] */
+    align-items: flex-start;
+}
+.activity-item button {
+    margin-top: 10px;
+}
+
+/* Schermi superiori a 600px: layout in riga */
+@media (min-width: 601px) {
+    .activity-item {
+        flex-direction: row; /* [cite: 412] */
+        justify-content: space-between; /* [cite: 412] */
+    }
+    .activity-item button {
+        margin-top: 0;
+    }
+}
+
+/* 6) Stili del tema scuro */
+body.dark-theme {
+    background-color: #222; /* [cite: 416] */
+    color: #f0f0f0; /* [cite: 416] */
+}
+body.dark-theme .container,
+body.dark-theme .activity-item {
+    border-color: #666; /* [cite: 416] */
+}
+body.dark-theme header,
+body.dark-theme footer {
+    background-color: #111; /* [cite: 416] */
+}
+body.dark-theme .activity-item {
+    background-color: #444; /* [cite: 416] */
+}
+body.dark-theme a {
+    color: #9e9eff;
+}
+
+/* Stili per il tema scuro [cite: 30] */
+body.dark-theme {
+    background-color: #222; /* Sfondo pagina [cite: 30] */
+    color: #f0f0f0; /* Testo [cite: 30] */
+}
+
+body.dark-theme header,
+body.dark-theme footer {
+    background-color: #111; /* Header e footer [cite: 30] */
+    color: #f0f0f0;
+    border-color: #666; /* Bordi [cite: 30] */
+}
+
+body.dark-theme .theme-switcher a {
+    color: #f0f0f0;
+}
+
+body.dark-theme .filters button {
+    background-color: #444;
+    color: #f0f0f0;
+    border-color: #666;
+}
+
+body.dark-theme .task-item {
+    background-color: #444; /* Box attività [cite: 30] */
+    border-color: #666; /* Bordi [cite: 30] */
+}
+
+body.dark-theme .task-item button {
+    background-color: #555;
+    color: #f0f0f0;
+    border-color: #666;
+}
+
+body.dark-theme .task-item button:disabled {
+    background-color: #333;
+    color: #777;
+    border-color: #555;
+}
