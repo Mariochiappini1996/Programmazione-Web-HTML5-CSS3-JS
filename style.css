@@ -1,0 +1,143 @@
+body {
+    background-color: white;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.partecipa-btn {
+    background: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+header, footer {
+    background-color: black;
+    text-align: center;
+    padding: 1rem;
+}
+
+.theme-switcher, .filters {
+    text-align: center;
+    padding: 15px;
+}
+
+/* Menu cambio tema */
+.theme-switcher {
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 10px; /* Spazio sotto il menu del tema [cite: 18] */
+}
+
+.theme-switcher a {
+    text-decoration: none;
+    color: #333;
+    padding: 0 5px;
+}
+
+#events-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.movie-poster {
+    background: white;
+    border: 1px solid #555;
+    border-radius: 8px;
+    aspect-ratio: 2 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+}
+
+/* Responsive (Mobile-first) */
+@media (min-width: 600px) {
+    #events-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 1023px) {
+    #events-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (min-width: 1024px) {
+    #events-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* 6) Stili del tema scuro */
+body.dark-theme {
+    background-color: #222; /* [cite: 416] */
+    color: #f0f0f0; /* [cite: 416] */
+}
+body.dark-theme .container,
+body.dark-theme .activity-item {
+    border-color: #666; /* [cite: 416] */
+}
+body.dark-theme header,
+body.dark-theme footer {
+    background-color: #111; /* [cite: 416] */
+}
+body.dark-theme .activity-item {
+    background-color: #444; /* [cite: 416] */
+}
+body.dark-theme a {
+    color: #9e9eff;
+}
+
+/* Stili per il tema scuro [cite: 30] */
+body.dark-theme {
+    background-color: #222; /* Sfondo pagina [cite: 30] */
+    color: #f0f0f0; /* Testo [cite: 30] */
+}
+
+body.dark-theme header,
+body.dark-theme footer {
+    background-color: #111; /* Header e footer [cite: 30] */
+    color: #f0f0f0;
+    border-color: #666; /* Bordi [cite: 30] */
+}
+
+body.dark-theme .theme-switcher a {
+    color: #f0f0f0;
+}
+
+body.dark-theme .filters button {
+    background-color: #444;
+    color: #f0f0f0;
+    border-color: #666;
+}
+
+body.dark-theme .task-item {
+    background-color: #444; /* Box attività [cite: 30] */
+    border-color: #666; /* Bordi [cite: 30] */
+}
+
+body.dark-theme .task-item button {
+    background-color: #555;
+    color: #f0f0f0;
+    border-color: #666;
+}
+
+body.dark-theme .task-item button:disabled {
+    background-color: #333;
+    color: #777;
+    border-color: #555;
+}

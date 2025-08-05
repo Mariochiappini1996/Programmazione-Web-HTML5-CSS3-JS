@@ -1,0 +1,6 @@
+[
+{ "id": 1, "nome": "Concerto Rock", "data": "2024-04-15", "luogo": "Milano", "partecipanti": 120 },
+{ "id": 2, "nome": "Conferenza Tech", "data": "2024-05-10", "luogo": "Roma", "partecipanti": 200 },
+{ "id": 3, "nome": "Mostra d'Arte", "data": "2024-06-01", "luogo": "Torino", "partecipanti": 85 },
+{ "id": 4, "nome": "Maratona Cittadina", "data": "2024-06-20", "luogo": "Firenze", "partecipanti": 300 }
+]
