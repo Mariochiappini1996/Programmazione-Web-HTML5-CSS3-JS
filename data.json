@@ -1,0 +1,8 @@
+[
+{ "id": 1, "nome": "Smartphone Pro", "prezzo": 799.99, "img": "smartphone.jpg" },
+{ "id": 2, "nome": "Laptop Ultra", "prezzo": 1299.99, "img": "laptop.jpg" },
+{ "id": 3, "nome": "Cuffie Wireless", "prezzo": 199.50, "img": "cuffie.jpg" },
+{ "id": 4, "nome": "Smartwatch 2", "prezzo": 249.00, "img": "smartwatch.jpg" },
+{ "id": 5, "nome": "Tablet Slim", "prezzo": 450.00, "img": "tablet.jpg" },
+{ "id": 6, "nome": "Webcam HD", "prezzo": 89.90, "img": "webcam.jpg" }
+]
